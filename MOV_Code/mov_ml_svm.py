@@ -27,7 +27,8 @@ def load_csvs(file_list, label):
     frames = []
     for i, path in enumerate(file_list, 1):
         try:
-            df = pd.read_csv(path)
+            # df = pd.read_csv(path)
+            df = pd.read_csv(path, header=None)
         except Exception:
             df = pd.read_csv(path, sep=None, engine="python")
 

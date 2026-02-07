@@ -29,7 +29,8 @@ def load_csvs(file_list, label):
     frames = []
     for i, path in enumerate(file_list, 1):
         try:
-            df = pd.read_csv(path)
+            # df = pd.read_csv(path)
+            df = pd.read_csv(path, header=None)  # try no header first
         except Exception:
             df = pd.read_csv(path, sep=None, engine="python")  # fallback
         df["label"] = label
@@ -122,9 +123,9 @@ def main():
         for j in range(2):
             plt.text(j, i, cm[i, j], ha="center", va="center")
  
-    plt.savefig("confusion_matrix.png", dpi=300, bbox_inches="tight")
+    plt.savefig("confusion_matrix_LR.png", dpi=300, bbox_inches="tight")
     plt.show()
-    print("\nSaved plot as confusion_matrix.png")
+    print("\nSaved plot as confusion_matrix_LR.png")
  
  
 if __name__ == "__main__":

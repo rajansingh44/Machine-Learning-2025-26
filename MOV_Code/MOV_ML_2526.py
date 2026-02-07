@@ -35,7 +35,8 @@ def load_csvs(file_list, label):
         try:
             # df = pd.read_csv(path)
             # df = pd.read_csv(path, nrows=2000)
-            df = pd.read_csv(path, nrows=2000, usecols=range(0, 4096))
+            # df = pd.read_csv(path, nrows=2000, usecols=range(0, 4096))
+            df = pd.read_csv(path, header=None, nrows=2000, usecols=range(0, 4096))
         except Exception:
             df = pd.read_csv(path, sep=None, engine="python")
 
