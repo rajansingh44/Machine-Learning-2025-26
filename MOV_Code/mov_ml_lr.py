@@ -29,8 +29,8 @@ def load_csvs(file_list, label):
     frames = []
     for i, path in enumerate(file_list, 1):
         try:
-            # df = pd.read_csv(path)
-            df = pd.read_csv(path, header=None)  # try no header first
+             df = pd.read_csv(path, header=0)  # try with header first
+            # df = pd.read_csv(path, header=None)  # try no header first
         except Exception:
             df = pd.read_csv(path, sep=None, engine="python")  # fallback
         df["label"] = label
