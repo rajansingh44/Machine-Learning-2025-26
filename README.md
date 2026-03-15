@@ -263,26 +263,29 @@ These results demonstrate that **nonlinear machine learning models are more suit
 
 ---
 
-# Repository Structure
 
 ## Repository Structure
 
 ```
 Machine-Learning-2025-26/
 │
-├── Dataset/
-│   ├── MOV/
-│   ├── NO_MOV/
-│
 ├── MOV_Code/
-│   ├── MOV_ML_2526_DT.py
+│   ├── mov_ml_knn_fft.py
+│   ├── mov_ml_lr_fft.py
+│   ├── mov_ml_mlp_fft.py
+│   └── mov_ml_svm_fft.py
 │
-├── Results/
-│   ├── confusion_matrix_knn.png
-│   ├── confusion_matrix_mlp.png
-│
-├── Final_Report/
-│   ├── FinalReport.pdf
+├── Images/
+│   └── Image_FFT/
+│       └── header_for_None/
+│           ├── Accuracy_Knn_Fft.png
+│           ├── Accuracy_Lr_Fft.png
+│           ├── Accuracy_Mlp_Fft.png
+│           ├── Accuracy_Svm_Fft.png
+│           ├── confusion_matrix_Knn_Fft.png
+│           ├── confusion_matrix_Lr_Fft.png
+│           ├── confusion_matrix_Mlp_Fft.png
+│           └── confusion_matrix_Svm_Fft.png
 │
 └── README.md
 ```
@@ -349,3 +352,4 @@ Supervisor: **Prof. Dr. Andreas Pech**
 2. SRF02 Ultrasonic Sensor Technical Documentation  
 3. Bishop, C. M. *Pattern Recognition and Machine Learning*  
 4. Hastie, Tibshirani, Friedman – *The Elements of Statistical Learning*
+5. R. B. Saleem Basha, S. Veerapur, “Parameter setting and reliability test of a sensor system for infant carrier car seat sensing in a car using a dashboard sensor.” Student Project Report, Frankfurt University of Applied Sciences, Frankfurt, Germany.
